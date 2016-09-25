@@ -29,10 +29,13 @@ public class HelloWorld {
 	
 	
     //查看课程列表
-    @RequestMapping(value = "/test")
+    @RequestMapping(value = "/test.work")
     @ResponseBody
-    public String subject(HttpServletResponse response) {
-        return "HelloWorld";
+    public Result subject(HttpServletResponse response) {
+    	Result result = new Result();
+    	result.setCode(ResultCode.SUCCESS);
+    	result.setMessage("Hello Guia");
+    	return result;
     }
     
     @RequestMapping(value = "/getUser.work")
