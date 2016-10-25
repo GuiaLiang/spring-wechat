@@ -38,6 +38,11 @@ public class HelloWorld {
     	return result;
     }
     
+    @RequestMapping(value = "/test.jspx")
+    public ModelAndView test(HttpServletResponse response) {
+    	return new ModelAndView("index");
+    }
+    
     @RequestMapping(value = "/getUser.work")
     @ResponseBody
     public Result getUserInfo(HttpServletResponse response, int id) {
